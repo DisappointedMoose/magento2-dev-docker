@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+userID=$UID
+groupID=$(id -g)
+
+sudo chown -R $userID:$groupID app
+sudo chmod -R g+rw app

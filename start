@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+docker-compose up -d
+
+echo "
+=========================================
+
+Apache:     http://localhost/
+PHPMyAdmin: http://localhost:81
+Mailhog:    http://localhost:8025
+
+=========================================
+"
