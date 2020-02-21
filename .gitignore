@@ -2,16 +2,6 @@ app/*
 !app/.gitkeep
 
 logs/*
-!logs/.gitkeep
-
-logs/apache/*
-!logs/apache/.gitkeep
-
-logs/mariadb/*
-!logs/mariadb/.gitkeep
-
-logs/php/*
-!logs/php/.gitkeep
 
 conf/apache/vhosts/*
 !conf/apache/vhosts/myapp.conf

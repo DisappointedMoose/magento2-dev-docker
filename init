@@ -4,3 +4,6 @@ sudo sysctl -w vm.max_map_count=262144
 
 mkdir -p data/composer data/elasticsearch data/redis data/mariadb
 chmod 0777 -R data
+
+mkdir -p logs/apache logs/mariadb logs/php
+chmod 0777 -R logs
