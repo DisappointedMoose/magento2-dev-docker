@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+if [ -z "$1" ]
+    then
+        docker-compose exec --user daemon php-fpm grunt exec
+        docker-compose exec --user daemon php-fpm grunt less
+        docker-compose exec --user daemon php-fpm grunt deploy
+        docker-compose exec --user daemon php-fpm grunt watch
+else
+        docker-compose exec --user daemon php-fpm grunt clean:$@
+        docker-compose exec --user daemon php-fpm grunt exec:$@
+        docker-compose exec --user daemon php-fpm grunt less:$@
+        docker-compose exec --user daemon php-fpm grunt watch:$@
+fi
