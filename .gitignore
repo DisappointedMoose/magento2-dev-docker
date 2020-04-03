@@ -1,12 +1,13 @@
-app/*
-!app/.gitkeep
+app
 
 logs/*
 
-conf/apache/vhosts/*
-!conf/apache/vhosts/myapp.conf
+conf/apache/*
+!conf/apache/myapp.conf
 
 data/composer/*
 data/elasticsearch/*
 data/redis/*
 data/mariadb/*
+
+.idea
