@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+docker-compose exec --user daemon php-fpm n98-magerun2.phar $@
