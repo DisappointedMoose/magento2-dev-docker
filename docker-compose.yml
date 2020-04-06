@@ -24,6 +24,8 @@ services:
   php-fpm:
     build: ./dockerfiles/php7.2
     image: disappointedmoose/php-fpm:7.2
+    ports:
+      - "35729:35729"
     depends_on:
       - mariadb
     volumes:

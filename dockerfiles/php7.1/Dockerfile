@@ -33,11 +33,13 @@ RUN wget https://files.magerun.net/n98-magerun2.phar \
 	&& chmod +x ./n98-magerun2.phar \
 	&& mv ./n98-magerun2.phar /usr/local/bin/
 
-# Install NPM + Grunt
+# Install NPM + Grunt + Livereload
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
   	&& apt-get install -y nodejs build-essential \
     && curl https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh \
     && npm i -g grunt-cli yarn
+
+RUN npm i -g livereload
 
 # Configure
 RUN mkdir /usr/sbin/.composer && \
