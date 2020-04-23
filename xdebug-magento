@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+docker-compose exec --user daemon php-fpm env XDEBUG_CONFIG='remote_host=172.33.0.1 remote_autostart=1' PHP_IDE_CONFIG='serverName=magento-docker' /app/bin/magento $@
