@@ -6,6 +6,7 @@ conf/apache/*
 !conf/apache/myapp.conf
 
 data/composer/*
+data/composer-root/*
 data/elasticsearch/*
 data/redis/*
 data/mariadb/*
