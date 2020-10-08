@@ -12,3 +12,5 @@ data/redis/*
 data/mariadb/*
 
 .idea
+*.DS_Store
+.docker-sync

@@ -1,0 +1,17 @@
+version: "2"
+
+options:
+  max-attempt: 30
+
+syncs:
+  php-fpm-sync:
+    src: './app'
+    sync_excludes: ['.git', '.idea', '.docker-sync']
+    sync_userid: $USER_ID
+    sync_groupid: $GROUP_ID
+
+  apache-sync:
+    src: './app'
+    sync_excludes: ['.git', '.idea', '.docker-sync']
+    sync_userid: $USER_ID
+    sync_groupid: $GROUP_ID

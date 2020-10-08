@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+docker-sync start
+docker-compose -f docker-compose.yml -f docker-compose-sync.yml up -d
+
+echo "
+=========================================
+
+Apache:     http://localhost/
+PHPMyAdmin: http://localhost:81
+Mailhog:    http://localhost:8025
+
+=========================================
+"

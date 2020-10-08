@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  apache:
+    volumes:
+      - 'apache-sync:/app:nocopy'
+  php-fpm:
+    volumes:
+      - 'php-fpm-sync:/app:nocopy'
+
+volumes:
+  apache-sync:
+    external: true
+  php-fpm-sync:
+    external: true
