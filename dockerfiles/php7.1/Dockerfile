@@ -41,6 +41,9 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
 
 RUN npm i -g livereload
 
+# update Composer
+RUN composer self-update
+
 # Configure
 RUN mkdir /usr/sbin/.composer && \
 	chmod -R 0777 /usr/sbin/.composer
