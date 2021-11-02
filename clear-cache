@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+echo "Clearing Redis Cache..."
+docker-compose exec redis redis-cli flushall
+
+echo "Clearing var/cache/..."
+docker-compose exec --user root php-fpm rm -rf var/cache/*
+
+echo "Clearing var/page_cache/..."
+docker-compose exec --user root php-fpm rm -rf var/page_cache/*
+
+echo "Clearing generated/code/..."
+docker-compose exec --user root php-fpm rm -rf generated/code/*

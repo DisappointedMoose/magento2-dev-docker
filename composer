@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker-compose exec --user daemon php-fpm composer $@
+docker-compose exec --user daemon --env COMPOSER_MEMORY_LIMIT=-1 php-fpm COMPOSER_MEMORY_LIMIT=-1 composer $@

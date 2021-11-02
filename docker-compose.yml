@@ -22,8 +22,8 @@ services:
       - './app:/app'
       
   php-fpm:
-    build: ./dockerfiles/php7.2
-    image: disappointedmoose/php-fpm:7.2
+    build: ./dockerfiles/php7.4
+    image: disappointedmoose/php-fpm:7.4
     ports:
       - "35729:35729"
     depends_on:
@@ -36,11 +36,11 @@ services:
       - './data/composer-root:/root/.composer'
       
   elasticsearch:
-    image: bitnami/elasticsearch:6
+    image: bitnami/elasticsearch:7
     ports:
       - '9200:9200'
     volumes:
-      - './data/elasticsearch:/bitnami/elasticsearch/data'
+      - './data/elasticsearch7:/bitnami/elasticsearch/data'
   
   redis:
     image: bitnami/redis:latest

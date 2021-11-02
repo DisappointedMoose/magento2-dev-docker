@@ -8,6 +8,7 @@ conf/apache/*
 data/composer/*
 data/composer-root/*
 data/elasticsearch/*
+data/elasticsearch7/*
 data/redis/*
 data/mariadb/*
 
